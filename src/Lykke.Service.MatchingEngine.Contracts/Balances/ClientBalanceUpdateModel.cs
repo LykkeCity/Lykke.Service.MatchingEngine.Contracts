@@ -14,5 +14,7 @@ namespace Lykke.Service.MatchingEngine.Contracts.Balances
         public string Asset { get; set; }
         public double OldBalance { get; set; }
         public double NewBalance { get; set; }
+        public double OldReserved { get; set; }
+        public double NewReserved { get; set; }
     }
 }
