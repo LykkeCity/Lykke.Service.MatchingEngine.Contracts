@@ -1,5 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using JetBrains.Annotations;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Lykke.Service.MatchingEngine.Contracts.Balances
 {
@@ -7,6 +9,7 @@ namespace Lykke.Service.MatchingEngine.Contracts.Balances
     /// Reason of the client balances update
     /// </summary>
     [PublicAPI]
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum BalanceUpdateEventType
     {
         [EnumMember(Value = "CASH_IN_OUT_OPERATION")]
